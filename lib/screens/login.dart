@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase1/screens/forget.dart';
+import 'package:firebase1/screens/forget1.dart';
 import 'package:firebase1/screens/page1.dart';
 import 'package:firebase1/screens/sign_up.dart';
 import 'package:flutter/material.dart';
@@ -96,22 +97,22 @@ class _LoginState extends State<Login> {
                         if (storeId != null){
                         await _savedata(storeId);
                         }
-                        
+                         Navigator.push(context, MaterialPageRoute(builder: (context) => Page1(),));
                       }
                        
                       
                     }  
                      
                     }
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => Page1(),));
+                   
                   }, child: Text('submit')),
 
                   TextButton(onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => ForgetPassword(),));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => ForgetPassword1(),));
                   }, child: Text('Forget Password1')),
 
                   TextButton(onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => ForgetPassword(),));
+                  
                   }, child: Text('Forget Password2')),
 
 
